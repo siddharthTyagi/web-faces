@@ -1,1 +1,14 @@
 <!doctype html>
+<link rel="stylesheet" href="css/page.css" type="text/css" />
+<link rel="stylesheet" href="css/theme.css" type="text/css" />
+<script type="text/javascript" src="js/multichoice.js"></script>
+<script type="text/javascript">
+var dom = document.documentElement;
+document.addEventListener('DOMContentLoaded', function (e) {
+	var basic = new _MultiChoice(dom.querySelector("input#multichoice-basic"));
+});
+</script>
+<a class="max">MultiChoice.js</a>&nbsp;<a class="min">MINIFIED</a>
+<h2>Basic Usage</h2>
+<input id="multichoice-basic" type="text" value="value">
+<input id="multichoice-sample" type="text">

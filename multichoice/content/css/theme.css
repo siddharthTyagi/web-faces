@@ -1,0 +1,19 @@
+.default.multichoice-wrapper {
+	transition: 0.5s;
+	position: absolute;
+	cursor: default;
+}
+.default.multichoice-wrapper input.multichoice {
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 5px;
+	position: absolute;
+	cursor: default;
+}
+.default.multichoice-wrapper:HOVER input.multichoice {
+	border: 1px solid maroon;
+}
+.default.multichoice-wrapper:HOVER input.multichoice:HOVER {
+	background: maroon;
+	color: white;
+}
