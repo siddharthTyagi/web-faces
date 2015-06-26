@@ -43,6 +43,8 @@ var _MultiChoice = function (emt, args) {
 		};
 		this._onMouseOut = function (e) {
 			this._mc._collapse();
+			this._mc.style.top = (this._mc._clone.offsetTop - this._mc._t) + 'px';
+			this._mc.style.left = (this._mc._clone.offsetLeft - this._mc._l) + 'px';
 		};
 		this._init = function (args) {
 			this._clone = this.cloneNode(true);
@@ -56,16 +58,19 @@ var _MultiChoice = function (emt, args) {
 			this._styleEngine.addClass('multichoice', this);
 			var wrapper = document.createElement('div');
 			wrapper.addEventListener('mouseout', this._onMouseOut);
+			wrapper.addEventListener('mouseover', function (e) {
+				this._mc.style.top = (this._mc._clone.offsetTop - this._mc._t - 1) + 'px';
+				this._mc.style.left = (this._mc._clone.offsetLeft - this._mc._l - 1) + 'px';
+			});
 			this._styleEngine.addClass('default multichoice-wrapper', wrapper);
 			wrapper.style.width = (3 * (this._clone.clientWidth)) + 'px';
 			wrapper.style.height = (5 * (this._clone.clientHeight)) + 'px';
 			this._mca.top = this._clone.offsetTop - 2;
 			this._mca.left = this._clone.offsetLeft - 2;
-			var l = 0, t = 0;
-			wrapper.style.left = (l = (this._clone.offsetLeft - this._clone.clientWidth + 10)) + 'px';
-			wrapper.style.top = (t = this._clone.offsetTop - this._clone.clientHeight) + 'px';
-			this.style.top = (this._clone.offsetTop - t) + 'px';
-			this.style.left = (this._clone.offsetLeft - l) + 'px';
+			wrapper.style.left = (this._l = (this._clone.offsetLeft - this._clone.clientWidth + 10)) + 'px';
+			wrapper.style.top = (this._t = this._clone.offsetTop - this._clone.clientHeight) + 'px';
+			this.style.top = (this._clone.offsetTop - this._t) + 'px';
+			this.style.left = (this._clone.offsetLeft - this._l) + 'px';
 			this._clone.style.opacity = '0';
 			this._clone.parentNode.appendChild(wrapper);
 			wrapper._mc = this;

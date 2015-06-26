@@ -11,9 +11,10 @@
 	cursor: default;
 }
 .default.multichoice-wrapper:HOVER input.multichoice {
-	border: 1px solid maroon;
+	border: 2px solid maroon;
 }
 .default.multichoice-wrapper:HOVER input.multichoice:HOVER {
+	border-color: black;
 	background: maroon;
 	color: white;
 }
