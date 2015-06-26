@@ -1,2 +1,2 @@
 # Multichoice
-Multiple select for the <WEB>
+Multiple select for the {WEB}
