@@ -6,9 +6,10 @@
 var dom = document.documentElement;
 document.addEventListener('DOMContentLoaded', function (e) {
 	var basic = new _MultiChoice(dom.querySelector("input#multichoice-basic"));
+	var sample = new _MultiChoice(dom.querySelector("input#multichoice-sample"));
 });
 </script>
 <a class="max">MultiChoice.js</a>&nbsp;<a class="min">MINIFIED</a>
 <h2>Basic Usage</h2>
 <input id="multichoice-basic" type="text" value="value">
-<input id="multichoice-sample" type="text">
+<input id="multichoice-sample" type="text" value="another-one">
