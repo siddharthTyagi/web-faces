@@ -2,24 +2,44 @@
 	transition: 0.5s;
 	position: absolute;
 	cursor: default;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	top: 0px;
+	left: 0px;
 }
+
 .multichoice {
-	border: 1px solid black;
-	border-radius: 4px;
-	padding: 5px;
 	cursor: default;
-}
-.default.multichoice-wrapper input.multichoice {
-	border: 1px solid black;
-	border-radius: 4px;
-	padding: 5px;
-	cursor: default;
-}
-.default.multichoice-wrapper:HOVER input.multichoice {
-}
-.default.multichoice-wrapper:HOVER input.multichoice:HOVER {
+	position: absolute;
+	letter-spacing: 2px;
+	color: maroon;
+	padding: 4px !important;
+	border-radius: 2px !important;
 	border: 2px solid maroon;
-	border-color: black;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+.multichoice:HOVER {
 	background: maroon;
 	color: white;
+}
+
+input.multichoice {
+	
+}
+
+.indicator {
+	float: right;
+	padding-left: 4px;
+	padding-right: 2px;
+	border-radius: 2px;
+	background: maroon;
+	color: white;
+}
+
+.multichoice:HOVER .indicator {
+	background: white;
+	color: maroon;
 }

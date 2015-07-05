@@ -1,4 +1,9 @@
+* {
+	font-family: verdana;
+	font-size: 12pt;
+}
 input#multichoice-basic {
 	left: 20%;
 	top: 200px;
+	position: absolute;
 }
